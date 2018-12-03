@@ -7,7 +7,7 @@
                     <img class="item-img" :src='item.imgUrl' />
                 </div>
                 <div class="item-info border-botton">
-                    <p class="item-title">{{item.titile}}</p>
+                    <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">{{item.desc}}</p>
                     <button class="item-button">查看详情</button>
                 </div>
@@ -17,33 +17,8 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      },
-      {
-        id: '002',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      },
-      {
-        id: '003',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      },
-      {
-        id: '004',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      }]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>

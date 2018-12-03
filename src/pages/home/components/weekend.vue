@@ -2,7 +2,7 @@
     <div>
         <div class='title'>周末去哪</div>
         <ul>
-            <li class="item" v-for="item of recommendList" :key="item.id">
+            <li class="item" v-for="item of weekendList" :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src='item.imgUrl' />
                 </div>
@@ -16,33 +16,8 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      },
-      {
-        id: '002',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      },
-      {
-        id: '003',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      },
-      {
-        id: '004',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts8/1703/94/61eb7ce216efc702.jpg_r_390x260x90_d5dd6341.jpg',
-        titile: '中国好声音中国好声音中国好声音中国好声音',
-        desc: '中国好声音中国好声音中国好声音中国好声音中国好声音中国好声音'
-      }]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>
@@ -68,7 +43,7 @@ export default {
       text-overflow: ellipsis
     .item-desc
       line-height: .32rem
-      color: #ccc
+      color: #bbb
       overflow: hidden
       white-space: nowrap
       text-overflow: ellipsis
