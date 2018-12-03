@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div class="icon" v-for='item of page' :key="item.id">
                     <div class="icon-img-content">
@@ -16,6 +16,10 @@
 export default {
   data () {
     return {
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        loop: true
+      },
       iconList: [{
         id: '001',
         imgUrl: '//img.alicdn.com/tfs/TB1qpwlQXXXXXcCXXXXXXXXXXXX-256-256.png_60x60.jpg_.webp',
