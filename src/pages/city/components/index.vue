@@ -11,7 +11,7 @@
 export default {
   data () {
     return {
-      touchStatus: false
+      touchStatus: false,
       startY: 0
     }
   },
@@ -27,8 +27,8 @@ export default {
       return letters
     }
   },
-  updated() {
-    this.starty = this.$refs['A'][0].offsetTop
+  updated () {
+    this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
     handleClick (e) {
@@ -40,7 +40,7 @@ export default {
     handleTouchMove (e) {
       if (this.touchStatus) {
         const touchY = e.touches[0].clientY - 74
-        const index = Math.floor((touchY - startY) / 20)
+        const index = Math.floor((touchY - this.startY) / 20)
         if (index >= 0 && index < this.letters.length) {
           this.$emit('change', this.letters[index])
         }
