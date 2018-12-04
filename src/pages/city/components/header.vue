@@ -16,8 +16,8 @@ export default {
 <style lang="stylus" scoped>
 @import '../../../styles/varible.styl'
 .header
-  position: relative 
-  overflow:hidden
+  position: relative
+  overflow: hidden
   height: .86rem
   line-height: .86rem
   text-align: center
