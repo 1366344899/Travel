@@ -1,7 +1,7 @@
 <template>
   <div>
     <CityHeader></CityHeader>
-    <CitySearch></CitySearch>
+    <CitySearch :cities="cities"></CitySearch>
     <CityList :cities="cities" :HotCities="HotCities" :letter="letter"></CityList>
     <CityIndex :cities="cities" @change="handleChange"></CityIndex>
   </div>
@@ -31,7 +31,6 @@ export default {
       axios.get('/api/city.json').then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc (res) {
-      console.log(res)
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
