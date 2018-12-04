@@ -2,8 +2,8 @@
   <div>
     <CityHeader></CityHeader>
     <CitySearch></CitySearch>
-    <CityList :cities="cities" :HotCities="HotCities"></CityList>
-    <CityIndex :cities="cities"></CityIndex>
+    <CityList :cities="cities" :HotCities="HotCities" :letter="letter"></CityList>
+    <CityIndex :cities="cities" @change="handleChange"></CityIndex>
   </div>
 </template>
 <script>
@@ -16,7 +16,8 @@ export default {
   data () {
     return {
       cities: {},
-      HotCities: []
+      HotCities: [],
+      letter: ''
     }
   },
   components: {
@@ -37,6 +38,9 @@ export default {
         this.cities = data.cities
         this.HotCities = data.hotCities
       }
+    },
+    handleChange (letter) {
+      this.letter = letter
     }
   },
   mounted () {
