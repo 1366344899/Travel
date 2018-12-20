@@ -5,7 +5,7 @@
 ## Build Setup
 
 ``` bash
-# 运行过程先下载依赖
+# 先下载依赖
 npm install
 
 # 运行在localhost:8081
